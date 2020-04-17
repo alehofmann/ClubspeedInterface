@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F34E10C3-72D2-4A7B-A16F-8391F5A5A856}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>DCS.KioskV15.ClubSpeedInterface</RootNamespace>
+    <AssemblyName>ClubSpeedInterface</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ClubSpeedInterface.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ClubSpeedInterface.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ClubSpeedInterface.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ClubSpeedInterface.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac, Version=4.9.3.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>packages\Autofac.4.9.3\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DCS.Controls.OnscreenKeyboard">
+      <HintPath>References\DCS.Controls.OnscreenKeyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DCS.Drivers.SacoaPrinters.SacoaPrinterBase">
+      <HintPath>References\DCS.Drivers.SacoaPrinters.SacoaPrinterBase.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Savage.PhoneNumber, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PhoneNumber.1.1.1\lib\net46\Savage.PhoneNumber.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\RaceItemButton.Designer.vb">
+      <DependentUpon>RaceItemButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RaceItemButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelToViewModelMappingProfile.vb" />
+    <Compile Include="Presenters\HeatDetailView.vb" />
+    <Compile Include="Presenters\UserSignupPresenter.vb" />
+    <Compile Include="Services\ClubSpeedService.vb" />
+    <Compile Include="Services\DialogNotifier.Designer.vb">
+      <DependentUpon>DialogNotifier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DialogNotifier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\IClubSpeedService.vb" />
+    <Compile Include="Services\INIConfigReader.vb" />
+    <Compile Include="Services\IConfigReader.vb" />
+    <Compile Include="Services\IPopupNotifier.vb" />
+    <Compile Include="Services\MockClubSpeedService.vb" />
+    <Compile Include="Models\Customer.vb" />
+    <Compile Include="Models\HeatDetail.vb" />
+    <Compile Include="Models\HeatMain.vb" />
+    <Compile Include="Models\HeatType.vb" />
+    <Compile Include="Services\MsgboxNotifier.vb" />
+    <Compile Include="Services\TicketGenerator.vb" />
+    <Compile Include="Services\WorkingDialog.Designer.vb">
+      <DependentUpon>WorkingDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WorkingDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\ControlExtensions.vb" />
+    <Compile Include="Utils\LanguageExtensions.vb" />
+    <Compile Include="Utils\IniManager.vb" />
+    <Compile Include="Plugin.vb" />
+    <Compile Include="Presenters\SearchRacersPresenter.vb" />
+    <Compile Include="Presenters\ChooseRacePresenter.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presenters\RaceView.vb" />
+    <Compile Include="Utils\PictureBase64.vb" />
+    <Compile Include="Views\INoRacersFoundView.vb" />
+    <Compile Include="Views\IPickRaceView.vb" />
+    <Compile Include="Views\IRaceAlreadyHasRacerView.vb" />
+    <Compile Include="Views\ISearchRacersView.vb" />
+    <Compile Include="Views\IPickRacerView.vb" />
+    <Compile Include="Views\NoRacerFoundsView.Designer.vb">
+      <DependentUpon>NoRacersFoundView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoRacersFoundView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PickRaceView.Designer.vb">
+      <DependentUpon>PickRaceView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PickRaceView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PickRace_v2View.Designer.vb">
+      <DependentUpon>PickRace_v2View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PickRace_v2View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RaceAlreadyHasRacerView.Designer.vb">
+      <DependentUpon>RaceAlreadyHasRacerView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaceAlreadyHasRacerView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RacerView.vb" />
+    <Compile Include="Views\SearchRacersByPhoneView.Designer.vb">
+      <DependentUpon>SearchRacersByPhoneView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchRacersByPhoneView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchRacersView.Designer.vb">
+      <DependentUpon>SearchRacersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchRacersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PickRacerView.Designer.vb">
+      <DependentUpon>PickRacerView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PickRacerView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserSignup\DataEntryForm.Designer.vb">
+      <DependentUpon>DataEntryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserSignup\DataEntryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserSignup\IUserSignup.vb" />
+    <Compile Include="Views\UserSignup\PhotoBoothView.Designer.vb">
+      <DependentUpon>PhotoBoothView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserSignup\PhotoBoothView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserSignup\UserSignup.vb" />
+    <Compile Include="Views\UserSignup\IUserSignupDataForm.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\RaceItemButton.resx">
+      <DependentUpon>RaceItemButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\DialogNotifier.resx">
+      <DependentUpon>DialogNotifier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\WorkingDialog.resx">
+      <DependentUpon>WorkingDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NoRacerFoundsView.resx">
+      <DependentUpon>NoRacersFoundView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PickRaceView.resx">
+      <DependentUpon>PickRaceView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PickRace_v2View.resx">
+      <DependentUpon>PickRace_v2View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RaceAlreadyHasRacerView.resx">
+      <DependentUpon>RaceAlreadyHasRacerView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchRacersByPhoneView.resx">
+      <DependentUpon>SearchRacersByPhoneView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchRacersView.resx">
+      <DependentUpon>SearchRacersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PickRacerView.resx">
+      <DependentUpon>PickRacerView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserSignup\DataEntryForm.resx">
+      <DependentUpon>DataEntryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserSignup\PhotoBoothView.resx">
+      <DependentUpon>PhotoBoothView.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screens\TakePicture.jpg" />
+    <None Include="Resources\Screens\RacersList_Ori.Jpg" />
+    <None Include="Resources\Screens\RacersList.Jpg" />
+    <None Include="Resources\Screens\ByPhone.Jpg" />
+    <None Include="Resources\Screens\DialogNotifier.Jpg" />
+    <None Include="Resources\Screens\PickRace.Jpg" />
+    <Content Include="Resources\Buttons\RaceItemButton.png" />
+    <Content Include="Resources\Screens\SelectRacer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
